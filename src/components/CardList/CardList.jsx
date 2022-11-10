@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from './CardList.modules.scss';
+import Styles from './CardList.module.scss';
 
 import Card from "../Card/Card";
 
@@ -7,7 +7,7 @@ const CardList = () => {
   return (
     <>
       <div>CardList</div>
-      <section>
+      <section >
         <Card />
       </section>
     </>

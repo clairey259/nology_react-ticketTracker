@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from './FiltersList.modules.scss';
+import Styles from './FiltersList.module.scss';
 
 import FilterItem from "../FilterItem/FilterItem";
 

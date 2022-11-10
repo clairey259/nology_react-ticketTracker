@@ -1,5 +1,5 @@
 import React from 'react'
-import Styles from './SearchBox.modules.scss';
+import Styles from './SearchBox.module.scss';
 
 const SearchBox = () => {
   return (
