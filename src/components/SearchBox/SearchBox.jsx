@@ -1,10 +1,17 @@
-import React from 'react'
-import Styles from './SearchBox.module.scss';
+import React from "react";
+import Styles from "./SearchBox.module.scss";
 
-const SearchBox = () => {
+const SearchBox = (props) => {
+  const { placeholder } = props;
   return (
-    <div>SearchBox</div>
-  )
-}
+    <div className={Styles.searchBox}>
+      {/* <input
+        type="text"
+        placeholder={placeholder}
+        onInput={(e) => updateSearchText(e.target.value)}
+      /> */}
+    </div>
+  );
+};
 
-export default SearchBox
+export default SearchBox;

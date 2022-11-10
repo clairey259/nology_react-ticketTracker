@@ -1,6 +1,7 @@
 import Styles from "./App.module.scss";
 import Main from "./components/Main/Main";
 import Navbar from "./components/Navbar/Navbar";
+import getBeers from "./services/beer.service";
 
 const App = () => {
   return (
