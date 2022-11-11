@@ -8,12 +8,17 @@ const Navbar = (props) => {
   const { updateSearchText } = props;
   return (
     <>
-      <section>
-        <SearchBox placeholder="Search for beers..." updateSearchText={updateSearchText}/>
-      </section>
-      <section>
-        <FiltersList />
-      </section>
+      <div className={Styles.navComponents}>
+        <section>
+          <SearchBox
+            placeholder="Search for beers..."
+            updateSearchText={updateSearchText}
+          />
+        </section>
+        <section>
+          <FiltersList />
+        </section>
+      </div>
     </>
   );
 };

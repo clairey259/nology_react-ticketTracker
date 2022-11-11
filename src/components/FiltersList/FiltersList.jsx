@@ -6,10 +6,11 @@ import FilterItem from "../FilterItem/FilterItem";
 const FiltersList = () => {
   return (
     <>
-      <div>FiltersList</div>
-      <section>
-        <FilterItem />
-      </section>
+      <div className={Styles.filtersList}>
+        <FilterItem label="High ABV (> 6.0%)"/>
+        <FilterItem label="Classic Range"/>
+        <FilterItem label="Acidic (ph < 4)"/>
+      </div>
     </>
   );
 };

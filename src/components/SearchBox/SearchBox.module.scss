@@ -1,12 +1,12 @@
 @import "../../variables.scss";
 
 .searchBox {
+  margin: $base-spacing * 2;
+  padding: $base-spacing;
   input {
-    height: 100%;
-    width: 100px;
-    vertical-align: top;
-    margin-right: $base-spacing * 2;
-    font-size: 15px;
+    height: auto;
+    width: 10rem;
+    font-size: 1rem;
     border: none;
     border-bottom: $primary-border;
     color: $primary-color;
@@ -21,20 +21,5 @@
       color: $tertiary-text;
     }
   }
-
-  .fa {
-    &:hover {
-      cursor: pointer;
-      color: $secondary-color;
-    }
-  }
 }
 
-@media only screen and (min-width: 768px) {
-  .search {
-    input {
-      width: unset;
-      font-size: 20px;
-    }
-  }
-}

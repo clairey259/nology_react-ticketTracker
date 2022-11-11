@@ -1,9 +1,13 @@
 import React from 'react';
 import Styles from './FilterItem.module.scss';
 
-const FilterItem = () => {
+const FilterItem = (props) => {
+  const { label } = props;
   return (
-    <div>FilterItem</div>
+    <div className={Styles.filterItem}>
+      <p>{label}</p>
+      <input type="checkbox" />
+    </div>
   )
 }
 

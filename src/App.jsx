@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import Styles from "./App.module.scss";
 import Main from "./components/Main/Main";
 import Navbar from "./components/Navbar/Navbar";
-import getBeers from "./services/beer.service";
+import getBeers, { getInitialBeers } from "./services/beer.service";
 
 const App = () => {
   const [beers, setBeers] = useState([]);
+  // const allBeers = getInitialBeers()
+  // setBeers(allBeers)
   const updateBeers = async (searchTerm) => {
       const apiBeers = await getBeers(searchTerm);
       setBeers(apiBeers)

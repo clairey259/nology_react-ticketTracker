@@ -1,15 +1,13 @@
-.page{
-    display: flex;
-    flex-direction: row;
+.page {
+  display: flex;
+  flex-direction: row;
 }
-.main{
-    height: 100vh;
-    width: calc(100vw - 15rem);
-    border: black solid 2px;
+.main {
+  height: fit-content;
+  width: calc(100vw - 15rem);
+  border-left: black solid 4px;
 }
 
 .navbar {
-    height: 100vh;
-    width: 15rem;
-    border: black solid 2px;  
+  width: 15rem;
 }
