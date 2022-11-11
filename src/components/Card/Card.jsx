@@ -1,14 +1,20 @@
 import React from 'react';
 import Styles from './Card.module.scss';
 
-const Card = () => {
+const Card = (props) => {
+  const { 
+    name, 
+    description, 
+    image_url,
+    tagline
+  } = props.beer;
   return (
     <>
     <div className={Styles.card}>
-      <img></img>
+      <img src={image_url} alt={`image of ${name}`} />
       <div className={Styles.beerDetails}>
-         <h2>Beer Name</h2>
-          <p>Beer Description</p>
+         <h2>{name}</h2>
+          <p>{tagline}</p>
       </div>
     </div>
     </>

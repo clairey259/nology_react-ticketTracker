@@ -2,14 +2,14 @@ import React from "react";
 import Styles from "./SearchBox.module.scss";
 
 const SearchBox = (props) => {
-  const { placeholder } = props;
+  const { placeholder, updateSearchText} = props;
   return (
     <div className={Styles.searchBox}>
-      {/* <input
+      <input
         type="text"
         placeholder={placeholder}
         onInput={(e) => updateSearchText(e.target.value)}
-      /> */}
+      />
     </div>
   );
 };

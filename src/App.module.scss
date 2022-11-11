@@ -1,15 +1,15 @@
 .page{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 .main{
     height: 100vh;
-    width: calc(100vw - 20rem);
+    width: calc(100vw - 15rem);
     border: black solid 2px;
 }
 
 .navbar {
     height: 100vh;
-    width: 20rem;
+    width: 15rem;
     border: black solid 2px;  
 }
