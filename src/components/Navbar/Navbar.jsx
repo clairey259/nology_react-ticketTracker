@@ -5,18 +5,23 @@ import SearchBox from "../SearchBox/SearchBox";
 import FiltersList from "../FiltersList/FiltersList";
 
 const Navbar = (props) => {
-  const { updateSearchText } = props;
+  const { isAbvTicked, onAbvTickChange, setSearchTerm, setAcidityTicked } =
+    props;
   return (
     <>
       <div className={Styles.navComponents}>
         <section>
           <SearchBox
             placeholder="Search for beers..."
-            updateSearchText={updateSearchText}
+            setSearchTerm={setSearchTerm}
           />
         </section>
         <section>
-          <FiltersList />
+          <FiltersList
+            isAbvTicked={isAbvTicked}
+            onAbvTickChange={onAbvTickChange}
+            setAcidityTicked={setAcidityTicked}
+          />
         </section>
       </div>
     </>

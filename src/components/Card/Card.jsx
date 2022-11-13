@@ -5,7 +5,8 @@ const Card = (props) => {
   const { 
     name, 
     image_url,
-    tagline
+    tagline,
+    ph
   } = props.beer;
   return (
     <>
@@ -14,6 +15,7 @@ const Card = (props) => {
       <div className={Styles.beerDetails}>
          <h2>{name}</h2>
           <p>{tagline}</p>
+          <p>{ph}</p>
       </div>
     </div>
     </>

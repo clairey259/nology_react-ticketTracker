@@ -1,15 +1,16 @@
 import React from "react";
-import Styles from './FiltersList.module.scss';
+import Styles from "./FiltersList.module.scss";
 
 import FilterItem from "../FilterItem/FilterItem";
 
-const FiltersList = () => {
+const FiltersList = (props) => {
+  const { isAbvTicked, onAbvTickChange, setAcidityTicked } = props;
   return (
     <>
       <div className={Styles.filtersList}>
-        <FilterItem label="High ABV (> 6.0%)"/>
-        <FilterItem label="Classic Range"/>
-        <FilterItem label="Acidic (ph < 4)"/>
+        <FilterItem label="High ABV (> 6.0%)" isTicked={isAbvTicked} onTickChange={onAbvTickChange} />
+        <FilterItem label="Classic Range"  />
+        <FilterItem label="Acidic (ph < 4)"  setAcidityTicked={setAcidityTicked} onTickChange={setAcidityTicked}/> 
       </div>
     </>
   );
