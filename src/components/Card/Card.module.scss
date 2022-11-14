@@ -3,12 +3,17 @@
 .card {
   height: 20rem;
   width: 15rem;
-  border: black solid 2px;
+  border: black inset 2px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   margin: $base-spacing;
   padding: $base-spacing;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.247);
 
   img {
     height: 10rem;
@@ -17,7 +22,7 @@
   }
 
   .beerDetails {
-    height: 40%;
+    min-height: 40%;
     width: 100%;
     padding: $base-spacing * 4;
     border-top: none;
@@ -25,6 +30,8 @@
     display: flex;
     flex-direction: column;
     padding-top: $base-spacing * 2;
+    justify-content: space-evenly;
+    flex-direction: column;
 
     h2 {
       color: $primary-color;

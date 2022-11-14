@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from './CardList.module.scss';
+import Styles from "./CardList.module.scss";
 
 import Card from "../Card/Card";
 

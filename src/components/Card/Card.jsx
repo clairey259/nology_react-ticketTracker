@@ -1,25 +1,19 @@
-import React from 'react';
-import Styles from './Card.module.scss';
+import React from "react";
+import Styles from "./Card.module.scss";
 
 const Card = (props) => {
-  const { 
-    name, 
-    image_url,
-    tagline,
-    ph
-  } = props.beer;
+  const { name, image_url, tagline, ph } = props.beer;
   return (
     <>
-    <div className={Styles.card}>
-      <img src={image_url} alt={`${name}`} />
-      <div className={Styles.beerDetails}>
-         <h2>{name}</h2>
+      <div className={Styles.card}>
+        <img src={image_url} alt={`${name}`} />
+        <div className={Styles.beerDetails}>
+          <h2>{name}</h2>
           <p>{tagline}</p>
-          <p>{ph}</p>
+        </div>
       </div>
-    </div>
     </>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

@@ -5,8 +5,13 @@ import SearchBox from "../SearchBox/SearchBox";
 import FiltersList from "../FiltersList/FiltersList";
 
 const Navbar = (props) => {
-  const { isAbvTicked, onAbvTickChange, setSearchTerm, setAcidityTicked, setClassicRangeTicked } =
-    props;
+  const {
+    isAbvTicked,
+    onAbvTickChange,
+    setSearchTerm,
+    setAcidityTicked,
+    setClassicRangeTicked,
+  } = props;
   return (
     <>
       <div className={Styles.navComponents}>
