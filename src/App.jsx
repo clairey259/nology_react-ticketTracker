@@ -9,22 +9,20 @@ const App = () => {
   const [isAbvTicked, setAbvTicked] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [isAcidityTicked, setAcidityTicked] = useState(false);
+  const [isClassicRangeTicked, setClassicRangeTicked] = useState(false);
 
   const updateBeers = () => {
-    getBeers(isAbvTicked, false, isAcidityTicked, searchTerm).then((beers) => setBeers(beers));
+    getBeers(
+      isAbvTicked,
+      isClassicRangeTicked,
+      isAcidityTicked,
+      searchTerm
+    ).then((beers) => setBeers(beers));
   };
-  
-
 
   useEffect(() => {
     updateBeers();
-  }, [isAbvTicked, searchTerm, isAcidityTicked]);
-
- 
-
-  // const onAbvTickChange = (isTicked) => {
-  //   setAbvTicked(isTicked);
-
+  }, [isAbvTicked, searchTerm, isAcidityTicked, isClassicRangeTicked]);
 
   return (
     <>
@@ -35,6 +33,7 @@ const App = () => {
             onAbvTickChange={setAbvTicked}
             setAcidityTicked={setAcidityTicked}
             setSearchTerm={setSearchTerm}
+            setClassicRangeTicked={setClassicRangeTicked}
           />
         </section>
         <section className={Styles.main}>

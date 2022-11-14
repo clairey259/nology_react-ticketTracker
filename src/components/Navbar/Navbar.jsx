@@ -5,7 +5,7 @@ import SearchBox from "../SearchBox/SearchBox";
 import FiltersList from "../FiltersList/FiltersList";
 
 const Navbar = (props) => {
-  const { isAbvTicked, onAbvTickChange, setSearchTerm, setAcidityTicked } =
+  const { isAbvTicked, onAbvTickChange, setSearchTerm, setAcidityTicked, setClassicRangeTicked } =
     props;
   return (
     <>
@@ -21,6 +21,7 @@ const Navbar = (props) => {
             isAbvTicked={isAbvTicked}
             onAbvTickChange={onAbvTickChange}
             setAcidityTicked={setAcidityTicked}
+            setClassicRangeTicked={setClassicRangeTicked}
           />
         </section>
       </div>

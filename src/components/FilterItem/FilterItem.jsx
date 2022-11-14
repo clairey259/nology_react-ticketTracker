@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import Styles from "./FilterItem.module.scss";
-import getBeers from "../../services/beer.service";
 
 const FilterItem = (props) => {
   const { label, onTickChange, isTicked } = props;
@@ -11,7 +10,7 @@ const FilterItem = (props) => {
         type="checkbox"
         checked={isTicked}
         onChange={(e) => {
-          onTickChange(e.target.checked)
+          onTickChange(e.target.checked);
         }}
       />
     </div>
