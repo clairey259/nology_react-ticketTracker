@@ -7,6 +7,8 @@ describe("NavBar tests", () => {
     render(<NavBar />);
     const searchBoxElement = screen.getByTestId("searchBox");
     const filtersListElement = screen.getByTestId("filtersList");
-    expect(searchBoxElement && filtersListElement).toBeInTheDocument();
+    expect(searchBoxElement).toBeInTheDocument();
+    expect(filtersListElement).toBeInTheDocument();
   });
+
 });

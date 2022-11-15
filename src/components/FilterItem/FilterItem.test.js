@@ -5,7 +5,7 @@ import { render, screen } from "@testing-library/react";
 describe("FilterItem tests", () => {
   test("should display input checkbox", () => {
     render(<FilterItem />);
-    const checkboxElement = screen.getByRole("checkbox", { type: /checkbox/i })
+    const checkboxElement = screen.getByRole("checkbox")
     expect(checkboxElement).toBeInTheDocument()
   });
 
@@ -15,5 +15,15 @@ describe("FilterItem tests", () => {
     expect(label).toBeInTheDocument()
   });
 
+  test("checkbox should be ticked when isTicked = true", () => {
+    render(<FilterItem label="myLabel" isTicked={true}/>);
+    const checkboxElement = screen.getByRole("checkbox")
+    expect(checkboxElement).toBeChecked()
+  });
 
+  test("checkbox should be unticked when isTicked = false", () => {
+    render(<FilterItem label="myLabel" isTicked={false}/>);
+    const checkboxElement = screen.getByRole("checkbox")
+    expect(checkboxElement).not.toBeChecked()
+  });
 });

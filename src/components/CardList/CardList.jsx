@@ -12,7 +12,7 @@ const CardList = (props) => {
     </div>
   );
 
-  return <section className={Styles.cards}>{beers.map(getCardJsx)}</section>;
+  return <section className={Styles.cards} data-testid="cardList">{beers.map(getCardJsx)}</section>;
 };
 
 export default CardList;

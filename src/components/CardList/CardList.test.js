@@ -1,12 +1,12 @@
 import React from "react";
 import CardList from "./CardList";
 import { render, screen } from "@testing-library/react";
-import beers from "../../data/beers";
+import { beers } from "../../data/beers";
 
-xdescribe("CardList tests", () => {
+describe("CardList tests", () => {
   test("renders card element", () => {
-    render(<CardList />);
-    const cardEl = screen.getAllByTestId("card");
-    expect(cardEl).toBeInTheDocument();
+    render(<CardList beers={beers} />);
+    const cardElement = screen.getAllByTestId("card");
+    expect(cardElement.length).toEqual(beers.length);
   });
 });

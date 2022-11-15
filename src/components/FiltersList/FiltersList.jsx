@@ -20,12 +20,10 @@ const FiltersList = (props) => {
         />
         <FilterItem
           label="Classic Range"
-          setClassicRangeTicked={setClassicRangeTicked}
           onTickChange={setClassicRangeTicked}
         />
         <FilterItem
           label="Acidic (ph < 4)"
-          setAcidityTicked={setAcidityTicked}
           onTickChange={setAcidityTicked}
         />
       </div>
