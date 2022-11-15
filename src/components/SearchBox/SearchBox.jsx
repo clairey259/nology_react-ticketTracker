@@ -4,7 +4,7 @@ import Styles from "./SearchBox.module.scss";
 const SearchBox = (props) => {
   const { placeholder, setSearchTerm } = props;
   return (
-    <div className={Styles.searchBox}>
+    <div className={Styles.searchBox} data-testid="searchBox">
       <input
         type="text"
         placeholder={placeholder}

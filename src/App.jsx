@@ -27,7 +27,7 @@ const App = () => {
   return (
     <>
       <div className={Styles.page}>
-        <section className={Styles.navbar}>
+        <section className={Styles.navbar} data-testid="navbar">
           <Navbar
             isAbvTicked={isAbvTicked}
             onAbvTickChange={setAbvTicked}
@@ -36,7 +36,7 @@ const App = () => {
             setClassicRangeTicked={setClassicRangeTicked}
           />
         </section>
-        <section className={Styles.main}>
+        <section className={Styles.main} data-testid="main">
           <Main beers={beers} />
         </section>
       </div>

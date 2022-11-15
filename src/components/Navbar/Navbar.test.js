@@ -1,20 +1,12 @@
 import React from "react";
 import NavBar from "./NavBar";
-import { shallow } from 'enzyme';
-import beers from '../../data/beers';
-
+import { render, screen } from "@testing-library/react";
 
 describe("NavBar tests", () => {
-  let component;
-  let testBeers;
-
-  beforeEach(() => {
-    testBeers = beers[0];
-    component = shallow(<NavBar />);
-  })
-
-  it('should render', () => {
-    expect(component).toBeTruthy();
-  })
-
+  test("displays search box and filters list", () => {
+    render(<NavBar />);
+    const searchBoxElement = screen.getByTestId("searchBox");
+    const filtersListElement = screen.getByTestId("filtersList");
+    expect(searchBoxElement && filtersListElement).toBeInTheDocument();
+  });
 });

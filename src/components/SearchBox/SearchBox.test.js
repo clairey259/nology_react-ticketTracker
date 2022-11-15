@@ -1,20 +1,28 @@
 import React from "react";
 import SearchBox from "./SearchBox";
-import { shallow } from 'enzyme';
-import beers from '../../data/beers';
-
+import { fireEvent, render, screen } from "@testing-library/react";
 
 describe("SearchBox tests", () => {
-  let component;
-  let testBeers;
+  test("search input is rendered", () => {
+    render(<SearchBox placeholder="testPlaceHolder"/>);
+    const searchboxElement = screen.getByPlaceholderText("testPlaceHolder")
+    expect(searchboxElement).toBeInTheDocument()
+  });
 
-  beforeEach(() => {
-    testBeers = beers[0];
-    component = shallow(<SearchBox />);
-  })
+  test("search input is empty on render", () => {
+    render(<SearchBox placeholder="testPlaceHolder"/>);
+    const searchboxElement = screen.getByPlaceholderText("testPlaceHolder")
+    expect(searchboxElement.value).toBe("")
+  });
 
-  it('should render', () => {
-    expect(component).toBeTruthy();
-  })
+  test("search input should change", () => {
+    render(<SearchBox placeholder="testPlaceHolder"/>);
+    const searchboxElement = screen.getByPlaceholderText("testPlaceHolder")
+    const testValue = "test"
+
+    fireEvent.change(searchboxElement, { target: { value: testValue } })
+    expect(searchboxElement.value).toBe(testValue)
+  });
 
 });
+

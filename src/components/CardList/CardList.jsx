@@ -7,7 +7,7 @@ const CardList = (props) => {
   const { beers } = props;
 
   const getCardJsx = (beer) => (
-    <div className={Styles.cards} key={beer.id}>
+    <div className={Styles.cards} key={beer.id} data-testid="cards">
       <Card beer={beer} />
     </div>
   );

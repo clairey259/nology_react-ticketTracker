@@ -14,7 +14,7 @@ const Navbar = (props) => {
   } = props;
   return (
     <>
-      <div className={Styles.navComponents}>
+      <div className={Styles.navComponents} data-testid="navComponents">
         <section>
           <SearchBox
             placeholder="Search for beers..."

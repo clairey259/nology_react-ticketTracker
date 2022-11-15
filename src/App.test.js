@@ -1,5 +1,11 @@
-import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
-import Adaptor from '';
+import { render, screen } from '@testing-library/react';
+import App from './App';
 
-//import App, {function} from './App';
+xdescribe('App', () => {
+  test('renders App component', () => {
+    render(<App />);
+    screen.debug()
+  });
+
+
+});

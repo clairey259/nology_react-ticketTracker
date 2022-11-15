@@ -12,7 +12,7 @@ const FiltersList = (props) => {
   } = props;
   return (
     <>
-      <div className={Styles.filtersList}>
+      <div className={Styles.filtersList} data-testid="filtersList">
         <FilterItem
           label="High ABV (> 6.0%)"
           isTicked={isAbvTicked}

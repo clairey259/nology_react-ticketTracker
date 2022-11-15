@@ -1,20 +1,19 @@
 import React from "react";
 import FilterItem from "./FilterItem";
-import { shallow } from 'enzyme';
-import beers from '../../data/beers';
-
+import { render, screen } from "@testing-library/react";
 
 describe("FilterItem tests", () => {
-  let component;
-  let testBeers;
+  test("should display input checkbox", () => {
+    render(<FilterItem />);
+    const checkboxElement = screen.getByRole("checkbox", { type: /checkbox/i })
+    expect(checkboxElement).toBeInTheDocument()
+  });
 
-  beforeEach(() => {
-    testBeers = beers[0];
-    component = shallow(<FilterItem />);
-  })
+  test("loads and displays checkbox label", () => {
+    render(<FilterItem label="myLabel" />);
+    const label = screen.getByText("myLabel")
+    expect(label).toBeInTheDocument()
+  });
 
-  it('should render', () => {
-    expect(component).toBeTruthy();
-  })
 
 });

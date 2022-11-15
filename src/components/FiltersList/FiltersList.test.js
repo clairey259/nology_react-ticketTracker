@@ -1,20 +1,15 @@
 import React from "react";
-import FilterList from "./FilterList";
-import { shallow } from 'enzyme';
-import beers from '../../data/beers';
+import FiltersList from "./FiltersList";
+import userEvent from "@testing-library/user-event";
+import { render, screen } from "@testing-library/react";
+import beers from "../../data/beers";
 
+describe("FiltersList tests", () => {
+  test("displays three FilterItems", () => {
+    render(<FiltersList />);
+    const filtersListArr = screen.queryAllByTestId('filterItem')
+    expect(filtersListArr).toHaveLength(3)
 
-describe("FilterList tests", () => {
-  let component;
-  let testBeers;
-
-  beforeEach(() => {
-    testBeers = beers[0];
-    component = shallow(<FilterList />);
-  })
-
-  it('should render', () => {
-    expect(component).toBeTruthy();
-  })
+  });
 
 });
