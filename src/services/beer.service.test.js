@@ -32,6 +32,7 @@ describe("getBeers tests", () => {
 
   test("filterBeersByAcidity alters array when filterByAcidity is true", () => {
     expect(filterBeersByAcidity(beers, true)).not.toBe(beers);
+    expect(filterBeersByAcidity(beers, true)).toContain(beers[2])
   });
 
   test("filterBeersByAcidity returns same array when  filterByAcidity is false", () => {
