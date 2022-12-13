@@ -11,23 +11,15 @@ const FiltersList = (props) => {
     setClassicRangeTicked,
   } = props;
   return (
-    <>
-      <div className={Styles.filtersList} data-testid="filtersList">
-        <FilterItem
-          label="High ABV (> 6.0%)"
-          isTicked={isAbvTicked}
-          onTickChange={onAbvTickChange}
-        />
-        <FilterItem
-          label="Classic Range"
-          onTickChange={setClassicRangeTicked}
-        />
-        <FilterItem
-          label="Acidic (ph < 4)"
-          onTickChange={setAcidityTicked}
-        />
-      </div>
-    </>
+    <div className={Styles.filtersList} data-testid="filtersList">
+      <FilterItem
+        label="High ABV (> 6.0%)"
+        isTicked={isAbvTicked}
+        onTickChange={onAbvTickChange}
+      />
+      <FilterItem label="Classic Range" onTickChange={setClassicRangeTicked} />
+      <FilterItem label="Acidic (ph < 4)" onTickChange={setAcidityTicked} />
+    </div>
   );
 };
 

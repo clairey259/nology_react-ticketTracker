@@ -13,24 +13,22 @@ const Navbar = (props) => {
     setClassicRangeTicked,
   } = props;
   return (
-    <>
-      <div className={Styles.navComponents} data-testid="navComponents">
-        <section>
-          <SearchBox
-            placeholder="Search for beers..."
-            setSearchTerm={setSearchTerm}
-          />
-        </section>
-        <section>
-          <FiltersList
-            isAbvTicked={isAbvTicked}
-            onAbvTickChange={onAbvTickChange}
-            setAcidityTicked={setAcidityTicked}
-            setClassicRangeTicked={setClassicRangeTicked}
-          />
-        </section>
-      </div>
-    </>
+    <div className={Styles.navComponents} data-testid="navComponents">
+      <section>
+        <SearchBox
+          placeholder="Search for beers..."
+          setSearchTerm={setSearchTerm}
+        />
+      </section>
+      <section>
+        <FiltersList
+          isAbvTicked={isAbvTicked}
+          onAbvTickChange={onAbvTickChange}
+          setAcidityTicked={setAcidityTicked}
+          setClassicRangeTicked={setClassicRangeTicked}
+        />
+      </section>
+    </div>
   );
 };
 

@@ -6,17 +6,8 @@ const getBeers = (
   filterByAcidity,
   searchTerm
 ) => {
-  const url = new URL(API_URL);
-  if (filterByABV) {
-    url.searchParams.append("abv_gt", 6);
-  }
-  if (filterByClassicRange) {
-    url.searchParams.append("brewed_before", "12-2009");
-  }
-  if (searchTerm !== undefined && searchTerm !== "" && searchTerm !== " ") {
-    url.searchParams.append("beer_name", searchTerm);
-  }
-  return fetch(url.href)
+  const url = buildUrl(filterByABV, filterByClassicRange, searchTerm)
+  return fetch(url)
     .then((res) => res.json())
     .then((beers) => {
       if (filterByAcidity) {
@@ -51,24 +42,24 @@ export const filterBeersByAcidity = (beersArr, filterByAcidity) => {
   }
 };
 
-const fetchFunction = (
-  filterByAcidity,
-  filterByABV,
-  filterByClassicRange,
-  searchTerm
-) => {
-  const url = testFunctionGetBeers(
-    filterByABV,
-    filterByClassicRange,
-    searchTerm
-  );
-  fetch(url)
-    .then((res) => res.json())
-    .then((beers) => {
-      if (filterByAcidity) {
-        return beers.filter((beer) => beer.ph < 4);
-      } else {
-        return beers;
-      }
-    });
-};
+// const fetchFunction = (
+//   filterByAcidity,
+//   filterByABV,
+//   filterByClassicRange,
+//   searchTerm
+// ) => {
+//   const url = testFunctionGetBeers(
+//     filterByABV,
+//     filterByClassicRange,
+//     searchTerm
+//   );
+//   fetch(url)
+//     .then((res) => res.json())
+//     .then((beers) => {
+//       if (filterByAcidity) {
+//         return beers.filter((beer) => beer.ph < 4);
+//       } else {
+//         return beers;
+//       }
+//     });
+// };

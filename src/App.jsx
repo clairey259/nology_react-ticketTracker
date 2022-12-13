@@ -25,22 +25,20 @@ const App = () => {
   }, [isAbvTicked, searchTerm, isAcidityTicked, isClassicRangeTicked]);
 
   return (
-    <>
-      <div className={Styles.page}>
-        <section className={Styles.navbar} data-testid="navbar">
-          <Navbar
-            isAbvTicked={isAbvTicked}
-            onAbvTickChange={setAbvTicked}
-            setAcidityTicked={setAcidityTicked}
-            setSearchTerm={setSearchTerm}
-            setClassicRangeTicked={setClassicRangeTicked}
-          />
-        </section>
-        <section className={Styles.main} data-testid="main">
-          <Main beers={beers} />
-        </section>
-      </div>
-    </>
+    <div className={Styles.page}>
+      <section className={Styles.navbar} data-testid="navbar">
+        <Navbar
+          isAbvTicked={isAbvTicked}
+          onAbvTickChange={setAbvTicked}
+          setAcidityTicked={setAcidityTicked}
+          setSearchTerm={setSearchTerm}
+          setClassicRangeTicked={setClassicRangeTicked}
+        />
+      </section>
+      <section className={Styles.main} data-testid="main">
+        <Main beers={beers} />
+      </section>
+    </div>
   );
 };
 
